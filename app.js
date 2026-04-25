@@ -5,6 +5,8 @@ import { randomUUID } from "crypto";
 const app = express();
 const port = 3000;
 
+// Comentario 1: para GIT.
+
 app.use(express.json());
 
 app.use((req, res, next) => {
