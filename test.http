@@ -1,0 +1,46 @@
+
+
+### Ver todos
+GET http://localhost:3000/alumnos?apellido=D&estado=ACT&sexo=M
+
+### Ver uno por nro_alumno
+GET http://localhost:3000/alumno/2502
+
+### Alta de alumno
+POST http://localhost:3000/alumno HTTP/1.1
+Content-Type: application/json
+
+{
+	"apellido": "Duin",
+	"nombre": "Ana",
+	"dni": "45111222",
+	"nro_legajo": "L2001",
+	"fecha_nacimiento": "2005-03-15T00:00:00",
+	"sexo": "F",
+	"mail": "ana.lopez@example.com",
+	"calle": "Mitre",
+	"nro": "123",
+	"unidad": "2B",
+	"cod_postal": "2900",
+	"estado": "ACT"
+}
+
+### Modificar de alumno
+PATCH  http://localhost:3000/alumno HTTP/1.1
+Content-Type: application/json
+
+{
+    "nro_alumno": 2502,
+	"apellido": "Duin",
+	"nombre": "Ana Laura",
+	"nro_legajo": "L2001",
+	"sexo": "F",
+	"mail": "ana.lopez@example.com",
+	"calle": "Mitre",
+	"nro": "123",
+	"unidad": "2B",
+	"cod_postal": "2900"
+}
+
+### Borrar alumno
+DELETE http://localhost:3000/alumno/2001    
